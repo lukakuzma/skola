@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekat 1 - Fitnes Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: #ff0055;
+            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        header, section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            /* Postavljena tvoja slika slika1.jpg */
+            background-image: url('slika1.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        header h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #fff; /* Bela boja teksta */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8); /* Crna senka za vidljivost */
+        }
+
+        header p {
+            color: #fff; /* Bela boja teksta */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Crna senka za vidljivost */
+        }
+
+        .cards-wrapper {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 300px;
+            height: 220px;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 6px solid #ff0055;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+        }
+
+        .btn {
+            background-color: #ff0055;
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        form {
+            width: 100%;
+            max-width: 450px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .side-panel {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 100px;
+        }
+
+        .side-panel .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .side-panel h2 {
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        footer {
+            padding: 30px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">FITNES</div>
+        <ul>
+            <li><a href="#pocetna">Početna</a></li>
+            <li><a href="#usluge">Usluge</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div id="mySidePanel" class="side-panel">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <h2>Prijavi se</h2>
+        <div style="padding: 0 40px;">
+            <form style="background:none; box-shadow:none; padding:0;">
+                <input type="text" placeholder="Korisničko ime" style="margin-bottom:15px;"><br>
+                <input type="password" placeholder="Lozinka" style="margin-bottom:15px;"><br>
+                <button type="submit" class="btn" style="width:100%;">Uloguj se</button>
+            </form>
+        </div>
+    </div>
+
+    <header id="pocetna">
+        <h1>Budi u formi</h1>
+        <p>Najbolji treninzi u gradu.</p>
+        <a href="javascript:void(0)" class="btn" onclick="openNav()">Prijavi se</a>
+    </header>
+
+    <section id="usluge">
+        <h2>Usluge</h2>
+        <div class="cards-wrapper">
+            <div class="card">
+                <h3>Teretana</h3>
+                <p>Pristup 24/7.</p>
+            </div>
+            <div class="card">
+                <h3>CrossFit</h3>
+                <p>Snaga i kondicija.</p>
+            </div>
+            <div class="card">
+                <h3>Joga</h3>
+                <p>Mir i balans.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form>
+            <div class="form-group"><input type="text" placeholder="Ime" required></div>
+            <div class="form-group"><input type="email" placeholder="Email" required></div>
+            <div class="form-group"><textarea placeholder="Poruka" rows="4"></textarea></div>
+            <button type="submit" class="btn">Pošalji</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fitnes Studio</p>
+    </footer>
+
+    <script>
+        function openNav() { document.getElementById("mySidePanel").style.width = "400px"; }
+        function closeNav() { document.getElementById("mySidePanel").style.width = "0"; }
+    </script>
+
+</body>
+</html>
