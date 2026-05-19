@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitLife Studio</title>
+    <title>FK ABC - Zvanični sajt kluba</title>
     <style>
         * {
             margin: 0;
@@ -56,7 +56,7 @@
         .navbar .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #ffa500;
+            color: #e74c3c;
         }
 
         .nav-links {
@@ -77,7 +77,7 @@
         }
 
         .nav-links a:hover {
-            color: #ffa500;
+            color: #e74c3c;
         }
 
         .main-wrapper {
@@ -115,7 +115,7 @@
         .btn-open {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #ffa500;
+            background-color: #e74c3c;
             color: #000;
             font-weight: bold;
             text-decoration: none;
@@ -127,7 +127,7 @@
         }
 
         .btn-open:hover {
-            background-color: #cc8400;
+            background-color: #c0392b;
             transform: scale(1.05);
         }
 
@@ -135,7 +135,7 @@
             font-size: 24px;
             margin-bottom: 20px;
             color: #fff;
-            border-left: 4px solid #ffa500;
+            border-left: 4px solid #e74c3c;
             padding-left: 10px;
         }
 
@@ -163,7 +163,7 @@
         .card h3 {
             font-size: 18px;
             margin-bottom: 10px;
-            color: #ffa500;
+            color: #e74c3c;
         }
 
         .card p {
@@ -204,7 +204,7 @@
         }
 
         .close-btn:hover {
-            color: #ffa500;
+            color: #e74c3c;
         }
 
         .form-side h2 {
@@ -237,14 +237,14 @@
 
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: #ffa500;
+            border-color: #e74c3c;
             outline: none;
         }
 
         .btn-submit {
             width: 100%;
             padding: 14px;
-            background-color: #ffa500;
+            background-color: #e74c3c;
             color: #000;
             border: none;
             font-size: 16px;
@@ -255,7 +255,7 @@
         }
 
         .btn-submit:hover {
-            background-color: #cc8400;
+            background-color: #c0392b;
         }
 
         .footer {
@@ -288,15 +288,15 @@
 
 <body>
 
-    <img src="fitnes.jpg" alt="Pozadina" class="bg-image">
+    <img src="stadion.jpg" alt="Pozadina" class="bg-image">
     <div class="bg-overlay"></div>
 
     <header class="navbar">
-        <div class="logo">FitLife</div>
+        <div class="logo">FK ABC</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#">Početna</a></li>
-                <li><a onclick="toggleForm()">Prijava</a></li>
+                <li><a onclick="toggleForm()">Upiši se</a></li>
             </ul>
         </nav>
     </header>
@@ -304,26 +304,26 @@
     <div class="main-wrapper">
         <main class="content-side" id="contentSide">
             <div class="hero-content">
-                <h1>Postani najbolja verzija sebe</h1>
-                <p>Treniraj pametno. Živi zdravo. Kratak opis studija koji se savršeno uklapa u koncept i privlači nove
-                    članove.</p>
-                <button class="btn-open" onclick="toggleForm()">Prijavi se odmah</button>
+                <h1>Srce na teren! Ponos našeg grada</h1>
+                <p>Pratite najnovije rezultate, raspored utakmica i dešavanja unutar našeg kluba. Podržite momke u
+                    pohodu na novu titulu ove sezone!</p>
+                <button class="btn-open" onclick="toggleForm()">Postani deo tima</button>
             </div>
 
             <section id="usluge">
-                <h2 class="section-title">Naši Treninzi</h2>
+                <h2 class="section-title">Info Centar</h2>
                 <div class="cards-container">
                     <div class="card">
-                        <h3>Cardio</h3>
-                        <p>Intenzivni treninzi za sagorevanje masti i kondiciju.</p>
+                        <h3>Igrači (Kartice)</h3>
+                        <p>Pogledajte sastav prvog tima i statistiku naših ključnih igrača.</p>
                     </div>
                     <div class="card">
-                        <h3>Snaga</h3>
-                        <p>Izgradnja mišića uz pravilno vođenje trenera.</p>
+                        <h3>Raspored utakmica</h3>
+                        <p>Sledeći meč: FK ABC protiv FK Rival - Subota u 17:00h na domaćem terenu.</p>
                     </div>
                     <div class="card">
-                        <h3>Yoga</h3>
-                        <p>Fleksibilnost i opuštanje tela nakon napora.</p>
+                        <h3>Tabela / Rezultati</h3>
+                        <p>Trenutno zauzimamo 2. mesto u ligi sa 45 osvojenih bodova.</p>
                     </div>
                 </div>
             </section>
@@ -331,19 +331,20 @@
 
         <aside class="form-side" id="formSide">
             <button class="close-btn" onclick="toggleForm()">&times;</button>
-            <h2>Prijava</h2>
+            <h2>Postani deo tima</h2>
             <form>
                 <div class="form-group">
-                    <label for="name">Ime</label>
-                    <input type="text" id="name" placeholder="Unesite vaše ime" required>
+                    <label for="name">Ime i prezime</label>
+                    <input type="text" id="name" placeholder="Unesite ime" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Unesite vaš email" required>
+                    <input type="email" id="email" placeholder="Unesite email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Poruka</label>
-                    <textarea id="message" rows="4" placeholder="Vaša poruka..." required></textarea>
+                    <label for="message">Upit za omladinsku školu</label>
+                    <textarea id="message" rows="4"
+                        placeholder="Napišite vaše godište ako se upisujete u školu fudbala..." required></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Pošalji</button>
             </form>
@@ -351,7 +352,7 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2026 FitLife Studio. Sva prava zadržana.</p>
+        <p>&copy; 2026 FK ABC. Sva prava zadržana.</p>
     </footer>
 
     <script>

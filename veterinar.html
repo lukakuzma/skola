@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitLife Studio</title>
+    <title>VetExpert - Veterinarska Ordinacija</title>
     <style>
         * {
             margin: 0;
@@ -56,7 +56,7 @@
         .navbar .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #ffa500;
+            color: #2ecc71;
         }
 
         .nav-links {
@@ -77,7 +77,7 @@
         }
 
         .nav-links a:hover {
-            color: #ffa500;
+            color: #2ecc71;
         }
 
         .main-wrapper {
@@ -115,7 +115,7 @@
         .btn-open {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #ffa500;
+            background-color: #2ecc71;
             color: #000;
             font-weight: bold;
             text-decoration: none;
@@ -127,7 +127,7 @@
         }
 
         .btn-open:hover {
-            background-color: #cc8400;
+            background-color: #27ae60;
             transform: scale(1.05);
         }
 
@@ -135,7 +135,7 @@
             font-size: 24px;
             margin-bottom: 20px;
             color: #fff;
-            border-left: 4px solid #ffa500;
+            border-left: 4px solid #2ecc71;
             padding-left: 10px;
         }
 
@@ -163,7 +163,7 @@
         .card h3 {
             font-size: 18px;
             margin-bottom: 10px;
-            color: #ffa500;
+            color: #2ecc71;
         }
 
         .card p {
@@ -204,7 +204,7 @@
         }
 
         .close-btn:hover {
-            color: #ffa500;
+            color: #2ecc71;
         }
 
         .form-side h2 {
@@ -237,14 +237,14 @@
 
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: #ffa500;
+            border-color: #2ecc71;
             outline: none;
         }
 
         .btn-submit {
             width: 100%;
             padding: 14px;
-            background-color: #ffa500;
+            background-color: #2ecc71;
             color: #000;
             border: none;
             font-size: 16px;
@@ -255,7 +255,7 @@
         }
 
         .btn-submit:hover {
-            background-color: #cc8400;
+            background-color: #27ae60;
         }
 
         .footer {
@@ -288,15 +288,15 @@
 
 <body>
 
-    <img src="fitnes.jpg" alt="Pozadina" class="bg-image">
+    <img src="veterinar.jpg" alt="Pozadina" class="bg-image">
     <div class="bg-overlay"></div>
 
     <header class="navbar">
-        <div class="logo">FitLife</div>
+        <div class="logo">VetExpert</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#">Početna</a></li>
-                <li><a onclick="toggleForm()">Prijava</a></li>
+                <li><a onclick="toggleForm()">Zakazivanje</a></li>
             </ul>
         </nav>
     </header>
@@ -304,26 +304,26 @@
     <div class="main-wrapper">
         <main class="content-side" id="contentSide">
             <div class="hero-content">
-                <h1>Postani najbolja verzija sebe</h1>
-                <p>Treniraj pametno. Živi zdravo. Kratak opis studija koji se savršeno uklapa u koncept i privlači nove
-                    članove.</p>
-                <button class="btn-open" onclick="toggleForm()">Prijavi se odmah</button>
+                <h1>Najbolja nega za vaše ljubimce</h1>
+                <p>Radno vreme: Pon - Pet: 08:00 - 20:00 | Subota: 09:00 - 15:00. Naš tim stručnjaka je uvek tu da pruži
+                    brzu i profesionalnu pomoć vašim životinjama.</p>
+                <button class="btn-open" onclick="toggleForm()">Zakaži pregled</button>
             </div>
 
             <section id="usluge">
-                <h2 class="section-title">Naši Treninzi</h2>
+                <h2 class="section-title">Naše Usluge</h2>
                 <div class="cards-container">
                     <div class="card">
-                        <h3>Cardio</h3>
-                        <p>Intenzivni treninzi za sagorevanje masti i kondiciju.</p>
+                        <h3>Vakcinacija</h3>
+                        <p>Redovna vakcinacija i zaštita od parazita za pse i mačke.</p>
                     </div>
                     <div class="card">
-                        <h3>Snaga</h3>
-                        <p>Izgradnja mišića uz pravilno vođenje trenera.</p>
+                        <h3>Pregledi</h3>
+                        <p>Sistematski i specijalistički pregledi, laboratorija i dijagnostika.</p>
                     </div>
                     <div class="card">
-                        <h3>Yoga</h3>
-                        <p>Fleksibilnost i opuštanje tela nakon napora.</p>
+                        <h3>Operacije</h3>
+                        <p>Hirurške intervencije u sterilnim uslovima uz najsavremeniju opremu.</p>
                     </div>
                 </div>
             </section>
@@ -331,27 +331,28 @@
 
         <aside class="form-side" id="formSide">
             <button class="close-btn" onclick="toggleForm()">&times;</button>
-            <h2>Prijava</h2>
+            <h2>Zakazivanje</h2>
             <form>
                 <div class="form-group">
-                    <label for="name">Ime</label>
-                    <input type="text" id="name" placeholder="Unesite vaše ime" required>
+                    <label for="name">Ime vlasnika</label>
+                    <input type="text" id="name" placeholder="Vaše ime" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Unesite vaš email" required>
+                    <input type="email" id="email" placeholder="Vaš email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Poruka</label>
-                    <textarea id="message" rows="4" placeholder="Vaša poruka..." required></textarea>
+                    <label for="message">Opis problema / Poruka</label>
+                    <textarea id="message" rows="4" placeholder="Koji ljubimac je u pitanju i simptomi..."
+                        required></textarea>
                 </div>
-                <button type="submit" class="btn-submit">Pošalji</button>
+                <button type="submit" class="btn-submit">Pošalji zahtev</button>
             </form>
         </aside>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2026 FitLife Studio. Sva prava zadržana.</p>
+        <p>&copy; 2026 VetExpert Ordinacija. Sva prava zadržana.</p>
     </footer>
 
     <script>
